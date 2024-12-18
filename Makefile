@@ -6,7 +6,7 @@
 #    By: epascual <epascual@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/11 19:24:22 by epascual          #+#    #+#              #
-#    Updated: 2024/10/07 03:15:03 by epascual         ###   ########.fr        #
+#    Updated: 2024/12/18 12:37:05 by epascual         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC = $(SRCS)
 BSRC = $(BISRC)
 OBJ = $(SRC:.c=.o) 
 BOBJ = $(BSRC:.c=.o)
+MAKE = make
 
 all: $(NAME)
 
@@ -58,5 +59,8 @@ fclean: clean
 re: fclean all
 
 rebonus: fclean bonus
+
+submake: printf
+	$(MAKE) -C printf
 
 .PHONY: all clean fclean re bonus rebonus
