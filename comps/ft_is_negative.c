@@ -6,12 +6,12 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:05:19 by epascual          #+#    #+#             */
-/*   Updated: 2024/08/11 11:27:44 by epascual         ###   ########.fr       */
+/*   Updated: 2024/12/20 13:48:59 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+/*
 void	ft_is_negative(int num)
 {
 	char	p;
@@ -27,5 +27,12 @@ void	ft_is_negative(int num)
 	{
 		write(1, &n, 1);
 	}
+}
+*/
+int	ft_is_negative(long num)
+{
+	if (num < 0)
+		return (1);
+	return (0);
 }
 //int main(void){ft_is_negative(-12);return(0);}
