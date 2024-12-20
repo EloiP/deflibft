@@ -18,4 +18,25 @@ ft_is_print: Comprueba que es imprimible
 
 ####Convertidores
 
-ft_atoi: Convierte a string
+ft_atoi: Convierte string a int
+ft_itoa: Convierte int a string
+
+####Listas
+
+ft_lstnew: Crea una lista
+-Faltan muchas
+
+####Memoria
+
+ft_calloc: Reserva espacio en memoria inicializado en 0
+ft_memset: cambia un numero de espacios en memoria
+ft_bzero: Cambia espacio en memoria a 0
+ft_memcmp: Compara espacios en memoria
+ft_memchr: 
+ft_memcpy:
+ft_memmove:
+
+####File descriptors
+
+####Strings
+
