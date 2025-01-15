@@ -6,23 +6,28 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 03:54:20 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/07 22:32:39 by epascual         ###   ########.fr       */
+/*   Updated: 2025/01/15 12:44:26 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//# define NULL ((void *) 0)
+# ifndef NULL
+#  define NULL ((void *) 0)
+# endif
+
 # include <unistd.h>
 # include <stdlib.h>
 
-//typedef unsigned long size_t;
+typedef unsigned long size_t;
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 int		ft_atoi(const char *n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nelem, size_t elsize);
