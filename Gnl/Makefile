@@ -6,7 +6,7 @@ RM		= rm -fr
 AR		= ar rc
 
 SRC_FILES	= get_next_line get_next_line_utils
-SRC_FILES	= $(addsufix (_bonus.c, $(SRC_FILES)))
+SSRC_FILES	= $(addsufix (_bonus.c, $(SRC_FILES)))
 OBJ			= $(SRC_FILES:.c=.o)
 
 all:$(NAME)
@@ -15,7 +15,7 @@ $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-$(SRC_FILES)%.o: $(SRC_FILES)%.c Makefile get_next_line_bonus.h
+$(SSRC_FILES)%.o: $(SSRC_FILES)%.c Makefile get_next_line_bonus.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
