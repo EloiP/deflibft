@@ -31,7 +31,7 @@ ___
 - ft_lstadd_back: Añade un nodo al final de la lista
 - ft_lstadd_front: Añade un nodo a delante de la lista
 - ft_lstiter: Itera por la lista
-- ft_lstlast: 
+- ft_lstlast: Devuelve la direccion al ultimo de la lista 
 - ft_lstmap: 
 - ft_lstsize: Mide tamaño de la lista
 - ft_lstdelone: Elimina un elemento de una lista
