@@ -8,23 +8,24 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Source files
 SRCS = \
-    ft_atoi.c \
+    Convs/ft_atoi.c \
     ft_bzero.c \
     ft_calloc.c \
-    ft_isalnum.c \
-    ft_isalpha.c \
-    ft_isascii.c \
-    ft_isdigit.c \
-    ft_isprint.c \
-    ft_memchr.c \
-    ft_memcmp.c \
-    ft_memcpy.c \
-    ft_memmove.c \
-    ft_memset.c \
-    ft_putchar_fd.c \
-    ft_putendl_fd.c \
-    ft_putnbr_fd.c \
-    ft_putstr_fd.c \
+    Comps/ft_isalnum.c \
+    Comps/ft_isalpha.c \
+    Comps/ft_isascii.c \
+    Comps/ft_isdigit.c \
+    Comps/ft_isprint.c \
+	Comps/ft_is_negative.c \
+    Mem/ft_memchr.c \
+    Mem/ft_memcmp.c \
+    Mem/ft_memcpy.c \
+    Mem/ft_memmove.c \
+    Mem/ft_memset.c \
+    Fd/ft_putchar_fd.c \
+    Fd/ft_putendl_fd.c \
+    Fd/ft_putnbr_fd.c \
+    Fd/ft_putstr_fd.c \
     ft_strdup.c \
     ft_strchr.c \
     ft_strlcat.c \
@@ -38,18 +39,18 @@ SRCS = \
     ft_strjoin.c \
     ft_strtrim.c \
     ft_strmapi.c \
-    ft_itoa.c \
+    Convs/ft_itoa.c \
     ft_split.c \
-    ft_lstnew_bonus.c \
-    ft_lstadd_front_bonus.c \
-    ft_lstadd_back_bonus.c \
-    ft_lstclear_bonus.c \
-    ft_lstdelone_bonus.c \
-    ft_lstiter_bonus.c \
-    ft_lstlast_bonus.c \
-    ft_lstmap_bonus.c \
-    ft_lstsize_bonus.c \
-    ft_lstalast_bonus.c \
+    List/ft_lstnew_bonus.c \
+    List/ft_lstadd_front_bonus.c \
+    List/ft_lstadd_back_bonus.c \
+    List/ft_lstclear_bonus.c \
+    List/ft_lstdelone_bonus.c \
+    List/ft_lstiter_bonus.c \
+    List/ft_lstlast_bonus.c \
+    List/ft_lstmap_bonus.c \
+    List/ft_lstsize_bonus.c \
+    List/ft_lstalast_bonus.c \
     Gnl/get_next_line.c \
     Gnl/get_next_line_utils.c \
     Gnl/get_next_line_bonus.c \

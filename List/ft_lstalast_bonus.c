@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstalast_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/16 12:52:04 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/26 15:15:49 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:47:42 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:36:09 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-int	ft_isalpha(int c)
+t_list	*ft_lstalast(t_list *lst)
 {
-	if (c < 65 || c > 122 || (c < 97 && c > 90))
-	{
-		return (0);
-	}
-	return (1);
+	if (!lst)
+		return (NULL);
+	while (lst->next && lst->next->next)
+		lst = lst->next;
+	return (lst);
 }

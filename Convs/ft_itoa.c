@@ -6,11 +6,11 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:15:11 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 18:44:35 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:34:57 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 /*
 static int	get_digit(long int i)
 {

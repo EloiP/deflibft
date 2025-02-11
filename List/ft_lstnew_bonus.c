@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:33:21 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/07 22:36:26 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:46:34 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:37:12 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t c)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	if (!dest && !src)
+	new = malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	while (i < c)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dest);
+	new->next = NULL;
+	new->content = content;
+	return (new);
 }

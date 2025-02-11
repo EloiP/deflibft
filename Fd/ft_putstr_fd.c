@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:35:18 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/01 15:55:26 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:39:54 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:35:34 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t			iter;
-	unsigned char	*s;
-	unsigned char	*z;
-
-	iter = 0;
-	s = (unsigned char *)s1;
-	z = (unsigned char *)s2;
-	while (iter < n)
+	while (*s != 0)
 	{
-		if (*s != *z)
-		{
-			return (*s - *z);
-		}
-		iter++;
+		write(fd, s, 1);
 		s++;
-		z++;
 	}
-	return (0);
 }

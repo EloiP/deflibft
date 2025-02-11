@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/09 19:05:19 by epascual          #+#    #+#             */
-/*   Updated: 2024/12/20 13:48:59 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:33:21 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:39:08 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-/*
-void	ft_is_negative(int num)
-{
-	char	p;
-	char	n;
+#include "../Includes/libft.h"
 
-	p = 'P';
-	n = 'N';
-	if (num >= 0)
-	{
-		write(1, &p, 1);
-	}
-	else
-	{
-		write(1, &n, 1);
-	}
-}
-*/
-int	ft_is_negative(long num)
+void	*ft_memcpy(void *dest, const void *src, size_t c)
 {
-	if (num < 0)
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	if (!dest && !src)
+		return (NULL);
+	while (i < c)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		i++;
+	}
+	return (dest);
 }
-//int main(void){ft_is_negative(-12);return(0);}

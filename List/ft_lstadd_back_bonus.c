@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstalast_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:47:42 by epascual          #+#    #+#             */
-/*   Updated: 2025/01/15 16:22:06 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:48:13 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:35:46 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-t_list	*ft_lstalast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next && lst->next->next)
-		lst = lst->next;
-	return (lst);
+	t_list	*tmp;
+
+	if (!new)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		tmp = ft_lstlast(*(lst));
+		tmp->next = new;
+	}
 }

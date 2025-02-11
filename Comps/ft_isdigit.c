@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 11:50:26 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/27 16:36:06 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/16 12:52:04 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:33:58 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-int	ft_isascii(int c)
+int	ft_isdigit(int c)
 {
-	if ((sizeof(c) == sizeof(unsigned char)) || (c >= 0 && c <= 127))
+	if (c < 48 || c > 57)
 	{
-		return (1);
+		return (0);
 	}
-	return (0);
+	return (1);
 }

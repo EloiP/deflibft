@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:47:12 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 17:56:03 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/09 19:05:19 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:34:27 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_lstsize(t_list *lst)
+#include "../Includes/libft.h"
+/*
+void	ft_is_negative(int num)
 {
-	int		i;
+	char	p;
+	char	n;
 
-	i = 0;
-	while (lst)
+	p = 'P';
+	n = 'N';
+	if (num >= 0)
 	{
-		lst = lst->next;
-		i++;
+		write(1, &p, 1);
 	}
-	return (i);
+	else
+	{
+		write(1, &n, 1);
+	}
 }
+*/
+int	ft_is_negative(long num)
+{
+	if (num < 0)
+		return (1);
+	return (0);
+}
+//int main(void){ft_is_negative(-12);return(0);}

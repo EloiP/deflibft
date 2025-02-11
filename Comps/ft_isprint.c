@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:49:07 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/07 22:30:57 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/16 12:52:04 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:34:39 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	ft_isprint(int c)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
+	if (c < 32 || c > 126)
 	{
-		f(lst->content);
-		lst = lst->next;
+		return (0);
 	}
+	return (1);
 }
