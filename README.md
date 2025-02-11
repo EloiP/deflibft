@@ -43,9 +43,9 @@ ___
 - ft_memset: cambia un numero de espacios en memoria
 - ft_bzero: Cambia espacio en memoria a 0
 - ft_memcmp: Compara espacios en memoria
-- ft_memchr: 
-- ft_memcpy:
-- ft_memmove:
+- ft_memchr: Compara posiciones en memoria
+- ft_memcpy: Copia de una posicion en memoria a otra
+- ft_memmove: Mueve posiciones en memoria
 
 ## File descriptors
 
