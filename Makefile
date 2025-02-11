@@ -9,8 +9,8 @@ CFLAGS = -Wall -Wextra -Werror
 # Source files
 SRCS = \
     Convs/ft_atoi.c \
-    ft_bzero.c \
-    ft_calloc.c \
+    Mem/ft_bzero.c \
+    Mem/ft_calloc.c \
     Comps/ft_isalnum.c \
     Comps/ft_isalpha.c \
     Comps/ft_isascii.c \
@@ -22,25 +22,26 @@ SRCS = \
     Mem/ft_memcpy.c \
     Mem/ft_memmove.c \
     Mem/ft_memset.c \
+	Mem/ft_swap.c \
     Fd/ft_putchar_fd.c \
     Fd/ft_putendl_fd.c \
     Fd/ft_putnbr_fd.c \
     Fd/ft_putstr_fd.c \
-    ft_strdup.c \
-    ft_strchr.c \
-    ft_strlcat.c \
-    ft_strlcpy.c \
-    ft_strlen.c \
-    ft_strncmp.c \
-    ft_strnstr.c \
-    ft_tolower.c \
-    ft_toupper.c \
-    ft_substr.c \
-    ft_strjoin.c \
-    ft_strtrim.c \
-    ft_strmapi.c \
+    Strings/ft_strdup.c \
+    Strings/ft_strchr.c \
+    Strings/ft_strlcat.c \
+    Strings/ft_strlcpy.c \
+    Strings/ft_strlen.c \
+    Strings/ft_strncmp.c \
+    Strings/ft_strnstr.c \
+    Strings/ft_tolower.c \
+    Strings/ft_toupper.c \
+    Strings/ft_substr.c \
+    Strings/ft_strjoin.c \
+    Strings/ft_strtrim.c \
+    Strings/ft_strmapi.c \
     Convs/ft_itoa.c \
-    ft_split.c \
+    Strings/ft_split.c \
     List/ft_lstnew_bonus.c \
     List/ft_lstadd_front_bonus.c \
     List/ft_lstadd_back_bonus.c \
@@ -51,6 +52,9 @@ SRCS = \
     List/ft_lstmap_bonus.c \
     List/ft_lstsize_bonus.c \
     List/ft_lstalast_bonus.c \
+	Arrays/ft_count_if.c \
+	Arrays/ft_foreach.c \
+	Arrays/ft_range.c \
     Gnl/get_next_line.c \
     Gnl/get_next_line_utils.c \
     Gnl/get_next_line_bonus.c \

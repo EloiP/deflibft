@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:37:38 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 17:42:41 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:36:30 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:12:22 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	l;
 	char	*res;
-	size_t	i;
-	size_t	it;
+	char	*st;
 
-	l = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
-	res = (char *)malloc(sizeof(char) * l);
-	if (!res || !s1 || !s2)
+	if (!s)
 		return (NULL);
-	i = 0;
-	while (i < ft_strlen((char *)s1))
+	if (start > ft_strlen(s))
 	{
-		res[i] = (char)(s1[i]);
-		i++;
+		len = 0;
+		start = ft_strlen(s);
 	}
-	it = 0;
-	while (it < ft_strlen((char *)s2))
-	{
-		res[i] = (char)(s2[it]);
-		it++;
-		i++;
-	}
-	res[i] = '\0';
+	if (ft_strlen(s + start) <= len)
+		len = ft_strlen(s + start);
+	st = (char *)s;
+	res = (char *)malloc(len + 1);
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, &st[start], len + 1);
 	return (res);
 }

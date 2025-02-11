@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:36:00 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 17:10:48 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/23 10:47:47 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:14:07 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	char				*fin;
-	unsigned long		tam;
-	int					i;
+	size_t	i;
+	size_t	n;
 
 	i = 0;
-	tam = ft_strlen((char *)s);
-	fin = (char *)malloc(sizeof(char) * tam + 1);
-	if (!fin)
-		return (NULL);
-	while (s[i])
+	if (*to_find == '\0')
+		return ((char *)str);
+	while (str[i])
 	{
-		fin[i] = s[i];
+		n = 0;
+		while ((str[i + n] == to_find[n]) && ((i + n) < len))
+		{
+			if (str[i + n] == '\0')
+				return ((char *)str + i);
+			n++;
+		}
+		if (to_find[n] == '\0')
+			return ((char *)str + i);
 		i++;
 	}
-	fin[i] = 0;
-	return (fin);
+	return (0);
 }

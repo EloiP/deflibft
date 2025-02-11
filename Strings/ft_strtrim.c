@@ -6,11 +6,11 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:37:56 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 18:06:57 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:12:15 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 /*
 char	*ft_strtrim(char const *s1, char const *set)
 {

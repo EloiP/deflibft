@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 18:48:17 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/26 15:19:56 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:36:00 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:11:51 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-int	ft_toupper(int str)
+char	*ft_strdup(const char *s)
 {
-	if (str < 123 && str > 96)
+	char				*fin;
+	unsigned long		tam;
+	int					i;
+
+	i = 0;
+	tam = ft_strlen((char *)s);
+	fin = (char *)malloc(sizeof(char) * tam + 1);
+	if (!fin)
+		return (NULL);
+	while (s[i])
 	{
-		str = str - 32;
+		fin[i] = s[i];
+		i++;
 	}
-	return (str);
+	fin[i] = 0;
+	return (fin);
 }

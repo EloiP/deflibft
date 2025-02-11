@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/13 18:22:12 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 18:08:35 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/09 18:01:49 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:48:39 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-unsigned long	ft_strlen(const char *str)
+int	*ft_range(int min, int max)
 {
-	unsigned long	count;
+	int	*range;
+	int	iter;
 
-	count = 0;
-	while (*str)
+	iter = min;
+	if (min >= max)
 	{
-		count++;
-		str++;
+		return (0);
 	}
-	return (count);
+	range = (int *)malloc(sizeof(int) * (max - min));
+	if (range == 0)
+		return (0);
+	while (iter < max)
+	{
+		range[iter - min] = iter;
+		iter++;
+	}
+	return (range);
 }

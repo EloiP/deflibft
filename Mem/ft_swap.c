@@ -6,9 +6,11 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 17:41:33 by epascual          #+#    #+#             */
-/*   Updated: 2024/08/13 17:52:20 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:13:04 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../Includes/libft.h"
 
 void	ft_swap(int *a, int *b)
 {

@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:13:48 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/01 15:40:13 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/09 18:07:39 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:48:15 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	while (0 < n--)
+	int	count;
+	int	i;
+
+	count = 0;
+	i = 0;
+	while (tab[i] != 0)
 	{
-		((unsigned char *)s)[n] = 0;
+		if (f(tab[i]))
+		{
+			count++;
+		}
+		i++;
 	}
+	return (count);
 }

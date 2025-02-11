@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 19:29:28 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 19:44:02 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/20 12:39:31 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:14:01 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	size_t	count;
+	unsigned int	iter;
+	int				res;
 
-	count = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (src[count] && (count < (size -1)))
+	iter = 0;
+	res = 0;
+	while ((iter < n) && (s1[iter] || s2[iter]))
 	{
-		dest[count] = src[count];
-		count++;
+		if (s1[iter] != s2[iter])
+		{
+			res = (unsigned char)(s1[iter]) - (unsigned char)(s2[iter]);
+			return (res);
+		}
+		iter++;
 	}
-	dest[count] = '\0';
-	return (ft_strlen(src));
+	return (res);
 }

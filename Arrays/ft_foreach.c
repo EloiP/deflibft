@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 19:01:48 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/26 15:19:40 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/09 18:06:20 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 18:48:28 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-int	ft_tolower(int str)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	if (str < 91 && str > 64)
+	int	i;
+
+	i = 0;
+	while (i < length)
 	{
-		str = str + 32;
+		f(tab[i]);
+		i++;
 	}
-	return (str);
 }

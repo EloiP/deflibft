@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 18:01:49 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/13 00:21:26 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/27 17:17:05 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:13:21 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../Includes/libft.h"
 
-int	*ft_range(int min, int max)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	*range;
-	int	iter;
+	unsigned int	i;
 
-	iter = min;
-	if (min >= max)
+	i = 0;
+	while (s[i])
 	{
-		return (0);
+		f(i, &(s[i]));
+		i++;
 	}
-	range = (int *)malloc(sizeof(int) * (max - min));
-	if (range == 0)
-		return (0);
-	while (iter < max)
-	{
-		range[iter - min] = iter;
-		iter++;
-	}
-	return (range);
 }

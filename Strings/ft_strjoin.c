@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 10:53:56 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/07 22:33:18 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:37:38 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:13:29 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	res;
+	size_t	l;
+	char	*res;
+	size_t	i;
+	size_t	it;
 
+	l = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	res = (char *)malloc(sizeof(char) * l);
+	if (!res || !s1 || !s2)
+		return (NULL);
 	i = 0;
-	j = 0;
-	res = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[res] != '\0')
-		res++;
-	if (size <= i)
-		res += size;
-	else
-		res += i;
-	while (src[j] != '\0' && (i + 1) < size)
+	while (i < ft_strlen((char *)s1))
 	{
-		dest[i] = src[j];
+		res[i] = (char)(s1[i]);
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
+	it = 0;
+	while (it < ft_strlen((char *)s2))
+	{
+		res[i] = (char)(s2[it]);
+		it++;
+		i++;
+	}
+	res[i] = '\0';
 	return (res);
 }

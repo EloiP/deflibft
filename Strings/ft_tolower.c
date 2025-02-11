@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:17:05 by epascual          #+#    #+#             */
-/*   Updated: 2024/09/27 18:19:53 by epascual         ###   ########.fr       */
+/*   Created: 2024/08/18 19:01:48 by epascual          #+#    #+#             */
+/*   Updated: 2025/02/11 19:05:53 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_tolower(int str)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
+	if (str < 91 && str > 64)
 	{
-		f(i, &(s[i]));
-		i++;
+		str = str + 32;
 	}
+	return (str);
 }

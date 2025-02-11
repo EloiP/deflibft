@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 03:54:20 by epascual          #+#    #+#             */
-/*   Updated: 2025/02/11 17:42:02 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:58:38 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int num, int fd);
 void			ft_putstr_fd(char const *s, int fd);
+//Arrays
+int				ft_count_if(char **tab, int (*f)(char*));
+void			ft_foreach(int *tab, int length, void (*f)(int));
+int				*ft_range(int min, int max);
 //Strings
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);

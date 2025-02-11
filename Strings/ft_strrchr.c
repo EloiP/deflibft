@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:34:12 by epascual          #+#    #+#             */
-/*   Updated: 2024/10/06 19:58:18 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:12:07 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../Includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (i <= ft_strlen(s))
+	i = ft_strlen((char *)s);
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
-		i++;
+		i--;
 	}
 	return (0);
 }

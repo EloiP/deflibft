@@ -59,10 +59,21 @@ ___
 - ft_tolower: Cambia string a minusculas
 - ft_toupper: Cambia string a mayúsculas
 - ft_Capitalize: Cambia a primera mayus, resto minus
-> Faltan algunas
+- ft_strlen: Devuelve el tamanyo de un string
+- ft_strchr
+- ft_strdup
+- ft_strlcat
+- ft_strlcpy
+- ft_strlen
+- ft_strncmp
+- ft_strnstr
+- ft_substr
+- ft_strjoin
+- ft_strtrim
+- ft_strmapi
 
 ## Arrays
 
-- ft_range: Crea un malloc array de un rango entre dos intis.
+- ft_range: Crea un malloc array de un rango entre dos ints.
 - ft_count_if: Cuenta cuantos valores siguen esta función comparadora.
 - ft_foreach: Pasa una función que cambia los valores del array.
