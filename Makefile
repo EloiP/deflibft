@@ -40,6 +40,7 @@ SRCS = \
     Strings/ft_strjoin.c \
     Strings/ft_strtrim.c \
     Strings/ft_strmapi.c \
+	Strings/ft_strcmp.c \
     Convs/ft_itoa.c \
     Strings/ft_split.c \
     List/ft_lstnew_bonus.c \
@@ -63,6 +64,10 @@ SRCS = \
     Printf/printnum.c \
     Printf/printstring.c \
     Printf/printpoint.c \
+    Printfd/ft_printfd.c \
+    Printfd/printnumfd.c \
+    Printfd/printstringfd.c \
+    Printfd/printpointfd.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)

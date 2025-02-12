@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 03:54:20 by epascual          #+#    #+#             */
-/*   Updated: 2025/02/11 18:58:38 by epascual         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:59:10 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
+int				ft_strcmp(char *s1, char *s2);
 //listas
 int				ft_lstsize(t_list *lst);
 t_list			*ft_lstnew(void *content);
@@ -98,6 +99,15 @@ int				printstring(char const *s);
 int				printnum(long n, char *base);
 int				printunum(unsigned int n, char *base);
 int				printpoint(unsigned long long n, char *base);
+//printfd
+void			checkerfd(int fd, int *ret, char check, va_list opc);
+int				realprintfd(int fd, char const *p, va_list opc);
+int				ft_printfd(int fd, char const *print, ...);
+int				printcharfd(int fd, char a);
+int				printstringfd(int fd, char const *s);
+int				printnumfd(int fd, long n, char *base);
+int				printunumfd(int fd, unsigned int n, char *base);
+int				printpointfd(int fd, unsigned long long n, char *base);
 //gnl
 char			*ft_free_strjoin(char *save, char *tmp);
 char			*crealinea(char *s);

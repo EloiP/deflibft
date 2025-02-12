@@ -8,8 +8,9 @@ ___
 
 ## Ejercicios grandes
 
-- get_next_line: Lee la siguiente linea de un fd
+- get_next_line: Lee la siguiente linea de un fd.
 - ft_printf: Imprime string y cualquier tipo de dato habitual.
+- ft_printfd: Printf con primer argumento el fd donde ponerlo.
 
 ## Comparadores de chars (devuelven booleanos)
 
@@ -71,6 +72,7 @@ ___
 - ft_strjoin
 - ft_strtrim
 - ft_strmapi
+- ft_strcmp: Similar a ft_strncmp pero con caracteres indefinidos.
 
 ## Arrays
 
