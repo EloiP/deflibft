@@ -79,3 +79,8 @@ ___
 - ft_range: Crea un malloc array de un rango entre dos ints.
 - ft_count_if: Cuenta cuantos valores siguen esta función comparadora.
 - ft_foreach: Pasa una función que cambia los valores del array.
+
+## Pipex
+
+- ft_freepointstring: Libera la memoria de un char **
+- gettenvar: Obtiene una variable de entorno especifica.
