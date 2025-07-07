@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 03:54:20 by epascual          #+#    #+#             */
-/*   Updated: 2025/05/06 16:17:53 by epascual         ###   ########.fr       */
+/*   Updated: 2025/07/07 22:23:51 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,4 +117,8 @@ char			*get_next_line(int fd);
 //pipex
 void			ft_free_pointstring(char **tab);
 char			*getenvar(char *name, char **env);
+//fractol
+double			atodbl(const char *n);
+//psw
+
 #endif

@@ -68,8 +68,9 @@ SRCS = \
     Printfd/printnumfd.c \
     Printfd/printstringfd.c \
     Printfd/printpointfd.c \
-	pipex/ft_free_pointstring.ci \
+	pipex/ft_free_pointstring.c \
 	pipex/getenvar.c \
+	Fractol/atodbl.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)

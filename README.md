@@ -84,3 +84,12 @@ ___
 
 - ft_freepointstring: Libera la memoria de un char **
 - gettenvar: Obtiene una variable de entorno especifica.
+
+## Fractol
+- atodbl: Convierte string a double.
+
+## Push swap
+
+- ft_lstalast: Devuelve la direccion al penultimo de la lista
+- ft_printlist: Imprime el contenido de una lista
+- ft_wordcount: Cuenta el numero de palabras.
